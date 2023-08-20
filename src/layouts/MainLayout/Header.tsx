@@ -28,7 +28,7 @@ const Header = () => {
             flexDirection: "row",
           }}
         >
-          <Typography variant="h6">Babylon Examples(场景效果)</Typography>
+          <Typography variant="h6">Babylon Examples</Typography>
           <TextField
             size="small"
             placeholder="搜索"
