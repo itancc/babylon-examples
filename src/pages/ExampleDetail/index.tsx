@@ -45,12 +45,12 @@ const CodeEditor = () => {
   useEffect(() => {
     initSDK();
   }, [VM]);
-  const back = () => {
+  const backToList = () => {
     navigate("/");
   };
   return (
     <FullBox sx={{ p: 3 }}>
-      <Button variant="contained" sx={{ mb: 2 }} onClick={back}>
+      <Button variant="contained" sx={{ mb: 2 }} onClick={backToList}>
         返回
       </Button>
       <Suspense>

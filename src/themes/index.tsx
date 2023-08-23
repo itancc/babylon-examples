@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { PropsWithChildren, createContext, useMemo, useState } from "react";
 
-import HarmonyOSSans from "@/assets/fonts/HarmonyOS_Sans_Regular.ttf";
+import ComponentOverrides from "./overrides";
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
@@ -30,21 +30,9 @@ const ThemeCustomization = ({ children }: PropsWithChildren) => {
     () =>
       createTheme({
         typography: {
-          fontFamily: "SmileySans",
+          fontFamily: "HarmonyOSSans",
         },
-        components: {
-          MuiCssBaseline: {
-            styleOverrides: `
-                @font-face {
-                    font-family: 'SmileySans';
-                    src: url(${HarmonyOSSans}) format('woff2');
-                    font-weight: normal;
-                    font-style: normal;
-                    font-display: swap;
-                }
-            `,
-          },
-        },
+        components: ComponentOverrides(),
         palette: {
           mode,
         },

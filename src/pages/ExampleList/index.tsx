@@ -9,6 +9,7 @@ import {
 } from "react";
 import { useNavigate } from "react-router-dom";
 
+/** 根据路径自动生成异步组件 */
 const getExampleComponents = () => {
   const exampleModules = import.meta.glob("../../examples/**/index.tsx");
   const exampleComponents = Object.entries(exampleModules).map(
@@ -19,6 +20,7 @@ const getExampleComponents = () => {
   );
   return exampleComponents;
 };
+
 const ExampleList = () => {
   const navigate = useNavigate();
   const [exampleComponents, setExampleComponents] = useState<
@@ -48,7 +50,7 @@ const ExampleList = () => {
               lg={3}
               height={300}
               sx={{ cursor: "pointer" }}
-              onClick={onGridClick}
+              onDoubleClick={onGridClick}
             >
               <Component></Component>
             </Grid>
