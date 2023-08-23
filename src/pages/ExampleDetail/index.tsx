@@ -1,4 +1,4 @@
-import { Box } from "@/components/FullBox";
+import FullBox from "@/components/FullBox";
 import { Button } from "@mui/material";
 import sdk, { VM } from "@stackblitz/sdk";
 import { useEffect, useRef, Suspense, useState } from "react";
@@ -49,14 +49,14 @@ const CodeEditor = () => {
     navigate("/");
   };
   return (
-    <Box sx={{ p: 3 }}>
+    <FullBox sx={{ p: 3 }}>
       <Button variant="contained" sx={{ mb: 2 }} onClick={back}>
         返回
       </Button>
       <Suspense>
         <div ref={codeEditorRef}></div>
       </Suspense>
-    </Box>
+    </FullBox>
   );
 };
 

@@ -1,4 +1,4 @@
-import FillBox from "@/components/FillBox";
+import FullBox from "@/components/FullBox";
 import { Grid } from "@mui/material";
 import {
   ComponentType,
@@ -35,7 +35,7 @@ const ExampleList = () => {
     navigate("/example-detail/start");
   };
   return (
-    <FillBox sx={{ p: 3 }}>
+    <FullBox sx={{ p: 3 }}>
       <Grid container spacing={2}>
         {exampleComponents.map((Component, index) => {
           return (
@@ -55,7 +55,7 @@ const ExampleList = () => {
           );
         })}
       </Grid>
-    </FillBox>
+    </FullBox>
   );
 };
 

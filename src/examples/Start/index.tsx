@@ -1,5 +1,4 @@
 import { PropsWithChildren, useEffect, useRef } from "react";
-import { CanvasBox } from "@/components/FullBox";
 import {
   ArcRotateCamera,
   Effect,
@@ -11,6 +10,7 @@ import {
   Vector3,
 } from "@babylonjs/core";
 import { uuid } from "@/utils/common";
+import FullBox from "@/components/FullBox";
 import vertexSource from "./vertex.glsl?raw";
 import fragmentSource from "./fragment.glsl?raw";
 import waterMap from "@/assets/maps/R.jpg";
@@ -107,9 +107,9 @@ const World = (props: PropsWithChildren<WorldProps>) => {
   }, []);
 
   return (
-    <CanvasBox id={id} ref={worldRef}>
+    <FullBox tag="canvas" id={id} ref={worldRef}>
       {children}
-    </CanvasBox>
+    </FullBox>
   );
 };
 
