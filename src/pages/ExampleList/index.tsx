@@ -7,7 +7,6 @@ import {
   useEffect,
   useState,
 } from "react";
-import { useNavigate } from "react-router-dom";
 
 /** 根据路径自动生成异步组件 */
 const getExampleComponents = () => {
@@ -22,7 +21,6 @@ const getExampleComponents = () => {
 };
 
 const ExampleList = () => {
-  const navigate = useNavigate();
   const [exampleComponents, setExampleComponents] = useState<
     LazyExoticComponent<ComponentType>[]
   >([]);
@@ -32,10 +30,6 @@ const ExampleList = () => {
     setExampleComponents(components);
   }, []);
 
-  const onGridClick = () => {
-    // 跳转详情页
-    navigate("/example-detail/start");
-  };
   return (
     <FullBox sx={{ p: 3 }}>
       <Grid container spacing={2}>
@@ -50,7 +44,6 @@ const ExampleList = () => {
               lg={3}
               height={300}
               sx={{ cursor: "pointer" }}
-              onDoubleClick={onGridClick}
             >
               <Component></Component>
             </Grid>

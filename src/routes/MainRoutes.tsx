@@ -4,15 +4,11 @@ import { lazy } from "react";
 import { RouteObject } from "react-router-dom";
 
 const ExampleList = Loadable(lazy(() => import("@/pages/ExampleList")));
-const ExampleDetail = Loadable(lazy(() => import("@/pages/ExampleDetail")));
 
 const MainRoutes: RouteObject = {
   path: "/",
   element: <MainLayout />,
-  children: [
-    { path: "/", element: <ExampleList /> },
-    { path: "example-detail/:name", element: <ExampleDetail /> },
-  ],
+  children: [{ path: "/", element: <ExampleList /> }],
 };
 
 export default MainRoutes;
