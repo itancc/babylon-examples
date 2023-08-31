@@ -10,7 +10,7 @@ const MainRoutes: RouteObject = {
   element: <MainLayout />,
   children: [
     { path: "/", element: <ExampleList /> },
-    { path: "/detail/:name", element: <ExampleDetail /> },
+    { path: "/:name", element: <ExampleDetail /> },
   ],
 };
 

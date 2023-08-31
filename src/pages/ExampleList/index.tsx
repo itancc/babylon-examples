@@ -9,13 +9,12 @@ const ExampleList = () => {
 
   const onGridClick = (name: string) => {
     // 跳转详情页
-    navigate(`/detail/${name}`);
+    navigate(`/${name}`);
   };
   return (
     <FullBox sx={{ p: 3 }}>
       <Grid container spacing={2}>
-        {exampleComponents.map((eComponent, index) => {
-          const Component = eComponent.component;
+        {exampleComponents.map((Component, index) => {
           return (
             <Grid
               item
@@ -26,9 +25,9 @@ const ExampleList = () => {
               lg={3}
               height={300}
               sx={{ cursor: "pointer" }}
-              onClick={() => onGridClick(eComponent.name)}
+              onClick={() => onGridClick(Component.name)}
             >
-              <Component oneFrame={true}></Component>
+              <Component.component oneFrame={true}></Component.component>
             </Grid>
           );
         })}
