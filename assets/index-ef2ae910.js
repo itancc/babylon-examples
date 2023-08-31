@@ -1,4 +1,4 @@
-import{r as v,j as x}from"./index-e6dc99b3.js";import{E as w,S as g,A as h,V as u,M as S,a as f,b,T as j,r as U}from"./renderLoop-8c3222b6.js";import{F as E}from"./useExamples-a29446be.js";const F=`precision highp float;\r
+import{r as v,j as x}from"./index-d090ff3b.js";import{E as w,S as g,A as h,V as u,M as S,a as f,b,T as j,r as U}from"./renderLoop-8c3222b6.js";import{F as E}from"./useExamples-7ff43dd6.js";const F=`precision highp float;\r
 attribute vec3 position;\r
 attribute vec2 uv;\r
 \r
