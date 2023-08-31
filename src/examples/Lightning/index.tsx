@@ -7,8 +7,11 @@ import {
   Vector3,
 } from "@babylonjs/core";
 import FullBox from "@/components/FullBox";
+import { renderLoop } from "@/utils/renderLoop";
+import { ExampleCommonProps } from "@/hooks/useExamples";
 
-const RainEffect = () => {
+const Lightning = (props: ExampleCommonProps) => {
+  const { oneFrame = false } = props;
   const worldRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const engine = new Engine(worldRef.current, true);
@@ -32,26 +35,12 @@ const RainEffect = () => {
     );
 
     // 只渲染一帧场景用于预览
-
-    engine.runRenderLoop(() => {
-      scene.render();
-      if (scene.isReady()) {
-        engine.stopRenderLoop();
-      }
+    renderLoop({
+      engine,
+      scene,
+      container: worldRef.current as HTMLCanvasElement,
+      oneFrame,
     });
-
-    // hover上去开始循环渲染
-    worldRef.current?.addEventListener("mouseenter", () => {
-      engine.runRenderLoop(() => {
-        scene.render();
-      });
-    });
-    // hover离开停止渲染
-    worldRef.current?.addEventListener("mouseleave", () => {
-      engine.stopRenderLoop();
-    });
-    // 取消循环渲染
-    //  engine.stopRenderLoop();
     window.addEventListener("resize", () => {
       engine.resize();
     });
@@ -59,9 +48,9 @@ const RainEffect = () => {
     return () => {
       engine.dispose();
     };
-  }, []);
+  }, [oneFrame]);
 
   return <FullBox tag="canvas" ref={worldRef}></FullBox>;
 };
 
-export default RainEffect;
+export default Lightning;

@@ -1,39 +1,21 @@
 import FullBox from "@/components/FullBox";
+import { useExamples } from "@/hooks/useExamples";
 import { Grid } from "@mui/material";
-import {
-  ComponentType,
-  LazyExoticComponent,
-  lazy,
-  useEffect,
-  useState,
-} from "react";
-
-/** 根据路径自动生成异步组件 */
-const getExampleComponents = () => {
-  const exampleModules = import.meta.glob("../../examples/**/index.tsx");
-  const exampleComponents = Object.entries(exampleModules).map(
-    ([path, loader]) => {
-      console.log(path, loader);
-      return lazy(loader as () => Promise<{ default: ComponentType }>);
-    }
-  );
-  return exampleComponents;
-};
+import { useNavigate } from "react-router-dom";
 
 const ExampleList = () => {
-  const [exampleComponents, setExampleComponents] = useState<
-    LazyExoticComponent<ComponentType>[]
-  >([]);
+  const navigate = useNavigate();
+  const exampleComponents = useExamples();
 
-  useEffect(() => {
-    const components = getExampleComponents();
-    setExampleComponents(components);
-  }, []);
-
+  const onGridClick = (name: string) => {
+    // 跳转详情页
+    navigate(`/detail/${name}`);
+  };
   return (
     <FullBox sx={{ p: 3 }}>
       <Grid container spacing={2}>
-        {exampleComponents.map((Component, index) => {
+        {exampleComponents.map((eComponent, index) => {
+          const Component = eComponent.component;
           return (
             <Grid
               item
@@ -44,8 +26,9 @@ const ExampleList = () => {
               lg={3}
               height={300}
               sx={{ cursor: "pointer" }}
+              onClick={() => onGridClick(eComponent.name)}
             >
-              <Component></Component>
+              <Component oneFrame={true}></Component>
             </Grid>
           );
         })}

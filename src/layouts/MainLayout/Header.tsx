@@ -10,12 +10,17 @@ import {
 import { Brightness4, Brightness7 } from "@mui/icons-material";
 import { useContext } from "react";
 import { ColorModeContext } from "@/themes";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
   const colorMode = useContext(ColorModeContext);
   const onThemeChange = () => {
     colorMode.toggleColorMode();
+  };
+  const goHome = () => {
+    navigate("/");
   };
   return (
     <AppBar enableColorOnDark position="fixed" color="inherit" elevation={0}>
@@ -28,7 +33,9 @@ const Header = () => {
             flexDirection: "row",
           }}
         >
-          <Typography variant="h6">Babylon Examples</Typography>
+          <Typography variant="h6" onClick={goHome}>
+            Babylon Examples
+          </Typography>
           <TextField
             size="small"
             placeholder="搜索"

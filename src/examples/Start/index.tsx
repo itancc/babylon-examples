@@ -1,4 +1,4 @@
-import { PropsWithChildren, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import {
   ArcRotateCamera,
   Effect,
@@ -9,17 +9,15 @@ import {
   Texture,
   Vector3,
 } from "@babylonjs/core";
-import { uuid } from "@/utils/common";
 import FullBox from "@/components/FullBox";
 import vertexSource from "./vertex.glsl?raw";
 import fragmentSource from "./fragment.glsl?raw";
 import waterMap from "@/assets/maps/R.jpg";
+import { ExampleCommonProps } from "@/hooks/useExamples";
+import { renderLoop } from "@/utils/renderLoop";
 
-export interface WorldProps {
-  id?: string;
-}
-const World = (props: PropsWithChildren<WorldProps>) => {
-  const { id = uuid(), children } = props;
+const World = (props: ExampleCommonProps) => {
+  const { oneFrame = false } = props;
   const worldRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const engine = new Engine(worldRef.current, true);
@@ -77,26 +75,12 @@ const World = (props: PropsWithChildren<WorldProps>) => {
     });
 
     // 只渲染一帧场景用于预览
-
-    engine.runRenderLoop(() => {
-      scene.render();
-      if (scene.isReady()) {
-        engine.stopRenderLoop();
-      }
+    renderLoop({
+      engine,
+      scene,
+      container: worldRef.current as HTMLCanvasElement,
+      oneFrame,
     });
-
-    // hover上去开始循环渲染
-    worldRef.current?.addEventListener("mouseenter", () => {
-      engine.runRenderLoop(() => {
-        scene.render();
-      });
-    });
-    // hover离开停止渲染
-    worldRef.current?.addEventListener("mouseleave", () => {
-      engine.stopRenderLoop();
-    });
-    // 取消循环渲染
-    //  engine.stopRenderLoop();
     window.addEventListener("resize", () => {
       engine.resize();
     });
@@ -104,13 +88,9 @@ const World = (props: PropsWithChildren<WorldProps>) => {
     return () => {
       engine.dispose();
     };
-  }, []);
+  }, [oneFrame]);
 
-  return (
-    <FullBox tag="canvas" id={id} ref={worldRef}>
-      {children}
-    </FullBox>
-  );
+  return <FullBox tag="canvas" ref={worldRef}></FullBox>;
 };
 
 export default World;
