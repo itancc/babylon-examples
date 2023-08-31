@@ -1,1 +1,0 @@
-import{l as t,j as s}from"./index-6648089b.js";import{u as m,F as a}from"./useExamples-d6662c4a.js";const x=()=>{const{name:n}=t(),e=m().find(o=>o.name===n);return s.jsx(a,{children:e?s.jsx(e.component,{}):null})};export{x as default};
