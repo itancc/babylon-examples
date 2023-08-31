@@ -25,7 +25,7 @@ const ExampleList = () => {
               lg={3}
               height={300}
               sx={{ cursor: "pointer" }}
-              onClick={() => onGridClick(Component.name)}
+              onDoubleClick={() => onGridClick(Component.name)}
             >
               <Component.component oneFrame={true}></Component.component>
             </Grid>

@@ -30,7 +30,7 @@ const Lightning = (props: ExampleCommonProps) => {
     camera.attachControl(worldRef.current, true);
     MeshBuilder.CreateGround(
       "box",
-      { width: 5, height: 5, subdivisions: 100, updatable: true },
+      { width: 5, height: 5, subdivisions: 100 },
       scene
     );
 
