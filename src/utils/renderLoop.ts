@@ -24,6 +24,7 @@ export const renderLoop = (
     container.addEventListener("mouseenter", () => {
       engine.runRenderLoop(() => {
         scene.render();
+        callback?.();
       });
     });
     // hover离开停止渲染
