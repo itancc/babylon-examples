@@ -1,4 +1,4 @@
-import{r as m,j as x}from"./index-7a5f133a.js";import{E as g,S as w,A as h,V as u,l as d,m as S,k as b,r as U}from"./renderLoop-33e00bb4.js";import{M as j}from"./meshBuilder-43bb173a.js";import{F as E}from"./useExamples-8de662f8.js";const F=`precision highp float;\r
+import{r as m,j as x}from"./index-d3342390.js";import{E as g,S as w,A as h,V as u,l as d,m as S,k as b,r as U}from"./renderLoop-33e00bb4.js";import{M as j}from"./meshBuilder-43bb173a.js";import{F as E}from"./useExamples-dcf7ec0c.js";const F=`precision highp float;\r
 attribute vec3 position;\r
 attribute vec2 uv;\r
 \r
