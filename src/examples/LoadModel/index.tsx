@@ -13,7 +13,7 @@ import { ExampleCommonProps } from "@/hooks/useExamples";
 import { renderLoop } from "@/utils/renderLoop";
 import "@babylonjs/loaders";
 
-const ModelLoading = (props: ExampleCommonProps) => {
+const LoadModel = (props: ExampleCommonProps) => {
   const { oneFrame = false } = props;
   const worldRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
@@ -64,4 +64,4 @@ const ModelLoading = (props: ExampleCommonProps) => {
   );
 };
 
-export default ModelLoading;
+export default LoadModel;
