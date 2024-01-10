@@ -17,7 +17,7 @@ import FullBox from "@/components/FullBox";
 import { renderLoop } from "@/utils/renderLoop";
 import { ExampleCommonProps } from "@/hooks/useExamples";
 import "@babylonjs/loaders";
-import { Inspector } from "@babylonjs/inspector";
+// import { Inspector } from "@babylonjs/inspector";
 
 const Billboard = (props: ExampleCommonProps) => {
   const { oneFrame = false } = props;
@@ -87,7 +87,7 @@ const Billboard = (props: ExampleCommonProps) => {
     window.addEventListener("resize", () => {
       engine.resize();
     });
-    Inspector.Show(scene, {});
+    // Inspector.Show(scene, {});
 
     return () => {
       engine.dispose();

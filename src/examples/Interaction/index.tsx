@@ -40,7 +40,7 @@ const Interaction = (props: ExampleCommonProps) => {
 
     // add test glb model
 
-    SceneLoader.Append("./models/Test/", "interaction.glb", scene, () => {
+    SceneLoader.AppendAsync("./models/Test/", "interaction.glb", scene, () => {
       const node = scene.getNodeById("strnd");
       const meshes = node?.getChildMeshes();
       if (meshes) {

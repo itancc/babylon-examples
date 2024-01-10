@@ -35,11 +35,10 @@ const LoadModel = (props: ExampleCommonProps) => {
     // 创建环境光
     new HemisphericLight("light", new Vector3(0, 1, 0), scene);
 
-    SceneLoader.Append(
+    SceneLoader.AppendAsync(
       "./models/DamagedHelmet/",
       "DamagedHelmet.gltf",
-      scene,
-      () => {}
+      scene
     );
     // 只渲染一帧场景用于预览
     renderLoop({
