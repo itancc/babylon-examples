@@ -8,7 +8,6 @@ import {
   HemisphericLight,
 } from "@babylonjs/core";
 import FullBox from "@/components/FullBox";
-
 import { ExampleCommonProps } from "@/hooks/useExamples";
 import { renderLoop } from "@/utils/renderLoop";
 import "@babylonjs/loaders";
