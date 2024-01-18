@@ -43,7 +43,7 @@ const ThemeCustomization = ({ children }: PropsWithChildren) => {
     <StyledEngineProvider injectFirst>
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
-          <CssBaseline></CssBaseline>
+          <CssBaseline enableColorScheme={true}></CssBaseline>
           {children}
         </ThemeProvider>
       </ColorModeContext.Provider>
