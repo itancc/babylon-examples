@@ -1,4 +1,4 @@
-import{r as m,j as i}from"./index-87722d8b.js";import{F as l}from"./useExamples-14b156bf.js";import{E as p,S as d,A as v,V as c,H as x,bD as S,o as g,bE as h,r as C}from"./renderLoop-08bda372.js";import{M as F}from"./meshBuilder-078fd9b0.js";const w=`#version 300 es\r
+import{r as m,j as i}from"./index-b962cb9a.js";import{F as l}from"./useExamples-b7544e13.js";import{E as p,S as d,A as v,V as c,H as x,bD as S,o as g,bE as h,r as C}from"./renderLoop-08bda372.js";import{M as F}from"./meshBuilder-078fd9b0.js";const w=`#version 300 es\r
 \r
 precision mediump float;\r
 \r
