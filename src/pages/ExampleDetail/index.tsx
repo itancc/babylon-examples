@@ -10,7 +10,7 @@ const ExampleDetail = () => {
   );
 
   return (
-    <FullBox>
+    <FullBox sx={{ p: 3 }}>
       {CurrentComponent ? <CurrentComponent.component /> : null}
     </FullBox>
   );
