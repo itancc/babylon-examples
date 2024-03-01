@@ -17,7 +17,7 @@ import FullBox from "@/components/FullBox";
 import { renderLoop } from "@/utils/renderLoop";
 import { ExampleCommonProps } from "@/hooks/useExamples";
 import "@babylonjs/loaders";
-// import { Inspector } from "@babylonjs/inspector";
+import iconSvg from "@/assets/images/location.svg";
 
 const Billboard = (props: ExampleCommonProps) => {
   const { oneFrame = false } = props;
@@ -54,14 +54,13 @@ const Billboard = (props: ExampleCommonProps) => {
 
     // create the 3D GUI Manager
 
-    const iconUrl = "./image/location.svg";
     const iconMesh = MeshBuilder.CreatePlane("icon", {
       size: 3,
       sideOrientation: Mesh.DOUBLESIDE,
     });
     const material = new StandardMaterial("iconMaterial");
     const texture = new Texture(
-      iconUrl,
+      iconSvg,
       scene,
       false,
       true,

@@ -12,7 +12,7 @@ import {
 import FullBox from "@/components/FullBox";
 import vertexSource from "./vertex.glsl?raw";
 import fragmentSource from "./fragment.glsl?raw";
-import waterMap from "@/assets/maps/R.jpg";
+import waterMap from "@/assets/images/R.jpg";
 import { ExampleCommonProps } from "@/hooks/useExamples";
 import { renderLoop } from "@/utils/renderLoop";
 
