@@ -11,7 +11,7 @@ const Basic = () => {
     });
     scene.createDefaultLight();
   };
-  return <BasicScene onMount={onMount} oneFrame={true}></BasicScene>;
+  return <BasicScene onMount={onMount}></BasicScene>;
 };
 
 export default Basic;
