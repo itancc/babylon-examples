@@ -1,1 +1,0 @@
-import{j as a}from"./index-44ce47db.js";import{B as r,b as m}from"./index-fb7b6564.js";import"./splatFileLoader-651efef3.js";import"./useOneFrame-573d53c3.js";const p=()=>{const t=({scene:e,camera:o})=>{o.radius=4,e.createDefaultLight(),m.AppendAsync("./models/DamagedHelmet/","DamagedHelmet.gltf",e)};return a.jsx(r,{onMount:t})};export{p as default};

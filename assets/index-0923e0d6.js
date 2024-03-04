@@ -1,4 +1,4 @@
-import{j as m}from"./index-44ce47db.js";import{B as u,j as s,k as x,T as p}from"./index-fb7b6564.js";import{M as d}from"./meshBuilder-33edfe43.js";import"./useOneFrame-573d53c3.js";const f=`precision highp float;\r
+import{j as m}from"./index-26539d7d.js";import{B as u,j as s,k as x,T as p}from"./index-9a0d4185.js";import{M as d}from"./meshBuilder-a9990446.js";import"./useOneFrame-f89d5bba.js";const f=`precision highp float;\r
 attribute vec3 position;\r
 attribute vec2 uv;\r
 \r
