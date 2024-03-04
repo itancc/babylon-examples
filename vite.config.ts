@@ -1,10 +1,13 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-
+import React from "@vitejs/plugin-react";
+import UnoCSS from "unocss/vite";
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "/babylon-examples/",
-  plugins: [react()],
+  server: {
+    host: "0.0.0.0",
+  },
+  plugins: [UnoCSS(), React()],
   resolve: {
     alias: {
       "@": "/src",
