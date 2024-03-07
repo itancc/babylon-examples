@@ -1,0 +1,1 @@
+import{q as a,j as e}from"./index-271e146f.js";import{u as t,O as m,F as r}from"./useOneFrame-8fa37e87.js";const u=()=>{const{name:n}=a(),s=t().find(o=>o.name===n);return e.jsx(m.Provider,{value:!1,children:e.jsx(r,{sx:{p:3},children:s?e.jsx(s.component,{}):null})})};export{u as default};
