@@ -9,7 +9,7 @@ import {
   MenuItem,
   IconButton,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const menuOptions = [
   {
@@ -73,7 +73,9 @@ export default function LogoMenu() {
     setAnchorEl(null);
   };
   const navigate = useNavigate();
+  const { pathname } = useLocation();
   const goHome = () => {
+    if (pathname === selectMenuOption.route) return;
     navigate(selectMenuOption.route);
   };
 
@@ -99,7 +101,7 @@ export default function LogoMenu() {
           </MenuItem>
         ))}
       </Menu>
-      <Box display="flex" ml={2} alignItems="center">
+      <Box display="flex" ml={2} alignItems="center" sx={{ cursor: "pointer" }}>
         <SvgIcon component={selectMenuOption.icon}></SvgIcon>
 
         <Typography variant="h6" ml={1} onClick={goHome}>
