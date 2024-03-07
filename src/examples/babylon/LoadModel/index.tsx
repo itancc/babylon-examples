@@ -7,7 +7,7 @@ const LoadModel = () => {
     camera.radius = 4;
     scene.createDefaultLight();
     SceneLoader.AppendAsync(
-      "/models/DamagedHelmet/",
+      `${import.meta.env.BASE_URL}/models/DamagedHelmet/`,
       "DamagedHelmet.gltf",
       scene
     );
