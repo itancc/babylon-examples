@@ -1,1 +1,0 @@
-import{j as a}from"./index-26539d7d.js";import{B as s,V as i}from"./index-9a0d4185.js";import{M as m}from"./meshBuilder-a9990446.js";import"./useOneFrame-f89d5bba.js";const c=()=>{const r=({camera:t,scene:o})=>{o.removeCamera(t),o.createDefaultLight();const e=m.CreateBox("box",{size:1},o);e.position=i.Zero()};return a.jsx(s,{onMount:r})};export{c as default};
