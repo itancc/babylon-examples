@@ -1,7 +1,6 @@
 import {
   AppBar,
   Toolbar,
-  Typography,
   TextField,
   Box,
   IconButton,
@@ -10,18 +9,15 @@ import {
 import { Brightness4, Brightness7 } from "@mui/icons-material";
 import { useContext } from "react";
 import { ColorModeContext } from "@/themes";
-import { useNavigate } from "react-router-dom";
+import LogoMenu from "./LogoMenu";
 
 const Header = () => {
   const theme = useTheme();
-  const navigate = useNavigate();
   const colorMode = useContext(ColorModeContext);
   const onThemeChange = () => {
     colorMode.toggleColorMode();
   };
-  const goHome = () => {
-    navigate("/");
-  };
+
   return (
     <AppBar enableColorOnDark position="fixed" color="inherit" elevation={0}>
       <Toolbar>
@@ -31,11 +27,10 @@ const Header = () => {
             flexGrow: 1,
             alignItems: "center",
             flexDirection: "row",
+            px: 2,
           }}
         >
-          <Typography variant="h6" onClick={goHome}>
-            Babylon Examples
-          </Typography>
+          <LogoMenu></LogoMenu>
           <TextField
             size="small"
             placeholder="搜索"

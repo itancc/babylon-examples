@@ -3,10 +3,11 @@ import { useExamples } from "@/hooks/useExamples";
 import { OneFrameContext } from "@/hooks/useOneFrame";
 import { Grid, Pagination } from "@mui/material";
 import { ChangeEvent, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ExampleList = () => {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
   const exampleComponents = useExamples();
   const [page, setPage] = useState(1);
   const [pageSize] = useState(8);
@@ -21,7 +22,7 @@ const ExampleList = () => {
   };
   const onGridClick = (name: string) => {
     // 跳转详情页
-    navigate(`/${name}`);
+    navigate(`${pathname}/${name}`);
   };
   return (
     <OneFrameContext.Provider value={true}>

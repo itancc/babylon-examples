@@ -5,13 +5,32 @@ import { RouteObject } from "react-router-dom";
 
 const ExampleList = Loadable(lazy(() => import("@/pages/ExampleList")));
 const ExampleDetail = Loadable(lazy(() => import("@/pages/ExampleDetail")));
-const MainRoutes: RouteObject = {
-  path: "/",
-  element: <MainLayout />,
-  children: [
-    { path: "/", element: <ExampleList /> },
-    { path: "/:name", element: <ExampleDetail /> },
-  ],
-};
+
+const MainRoutes: RouteObject[] = [
+  {
+    path: "/",
+    element: <MainLayout />,
+    children: [
+      { path: "", element: <ExampleList /> },
+      { path: ":name", element: <ExampleDetail /> },
+    ],
+  },
+  {
+    path: "/babylon",
+    element: <MainLayout />,
+    children: [
+      { path: "", element: <ExampleList /> },
+      { path: ":name", element: <ExampleDetail /> },
+    ],
+  },
+  {
+    path: "/webgpu",
+    element: <MainLayout />,
+    children: [
+      { path: "", element: <ExampleList /> },
+      { path: ":name", element: <ExampleDetail /> },
+    ],
+  },
+];
 
 export default MainRoutes;

@@ -1,18 +1,18 @@
 import { SceneLoader } from "@babylonjs/core";
 import "@babylonjs/loaders";
-import BasicScene, { SceneActor } from "@/components/BasicScene";
+import BabylonScene, { BabylonSceneActor } from "@/components/BabylonScene";
 
 const LoadModel = () => {
-  const onMount = ({ scene, camera }: SceneActor) => {
+  const onMount = ({ scene, camera }: BabylonSceneActor) => {
     camera.radius = 4;
     scene.createDefaultLight();
     SceneLoader.AppendAsync(
-      "./models/DamagedHelmet/",
+      "/models/DamagedHelmet/",
       "DamagedHelmet.gltf",
       scene
     );
   };
-  return <BasicScene onMount={onMount}></BasicScene>;
+  return <BabylonScene onMount={onMount}></BabylonScene>;
 };
 
 export default LoadModel;

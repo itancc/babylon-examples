@@ -7,10 +7,10 @@ import {
 } from "@babylonjs/core";
 import RainFragmentShader from "./rain.fragment.glsl?raw";
 
-import BasicScene, { SceneActor } from "@/components/BasicScene";
+import BabylonScene, { BabylonSceneActor } from "@/components/BabylonScene";
 
 const Rain = () => {
-  const onMount = (actor: SceneActor) => {
+  const onMount = (actor: BabylonSceneActor) => {
     const { scene, camera } = actor;
     // create environment light
     scene.createDefaultLight();
@@ -46,7 +46,7 @@ const Rain = () => {
       effect.setTextureFromPostProcess("sceneSampler", postProcess);
     };
   };
-  return <BasicScene onMount={onMount}> </BasicScene>;
+  return <BabylonScene onMount={onMount}> </BabylonScene>;
 };
 
 export default Rain;

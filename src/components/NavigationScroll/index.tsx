@@ -3,8 +3,7 @@ import { useLocation } from "react-router-dom";
 
 /** 导航滚动到顶部 */
 const NavigationScroll = ({ children }: PropsWithChildren) => {
-  const location = useLocation();
-  const { pathname } = location;
+  const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo({

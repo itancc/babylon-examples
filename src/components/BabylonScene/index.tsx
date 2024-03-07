@@ -4,20 +4,21 @@ import { PropsWithChildren, useEffect, useRef } from "react";
 import { Nullable } from "@/utils/types";
 import { useOneFrame } from "@/hooks/useOneFrame";
 
-export interface SceneActor {
+export interface BabylonSceneActor {
+  container: HTMLCanvasElement;
   scene: Scene;
   engine: Engine;
   camera: ArcRotateCamera;
 }
-export interface BasicSceneProps {
+export interface BabylonSceneProps {
   /** 挂载完成 */
-  onMount?: (actor: SceneActor) => void;
+  onMount?: (actor: BabylonSceneActor) => void;
   /** 自定义render方法 */
-  onRender?: (actor: SceneActor) => void;
+  onRender?: (actor: BabylonSceneActor) => void;
   /** 挂载结束 */
-  onUnmount?: (actor: SceneActor) => void;
+  onUnmount?: (actor: BabylonSceneActor) => void;
 }
-const BasicScene = (props: PropsWithChildren<BasicSceneProps>) => {
+const BabylonScene = (props: PropsWithChildren<BabylonSceneProps>) => {
   const { children, onMount, onRender, onUnmount } = props;
   const sceneRef = useRef<HTMLCanvasElement>(null);
   const oneFrame = useOneFrame();
@@ -37,7 +38,7 @@ const BasicScene = (props: PropsWithChildren<BasicSceneProps>) => {
     camera.setTarget(Vector3.Zero());
     camera.attachControl(container, true);
 
-    const actor = { scene, engine, camera };
+    const actor = { scene, engine, camera, container };
     onMount?.(actor);
 
     engine.runRenderLoop(() => {
@@ -83,4 +84,4 @@ const BasicScene = (props: PropsWithChildren<BasicSceneProps>) => {
   );
 };
 
-export default BasicScene;
+export default BabylonScene;

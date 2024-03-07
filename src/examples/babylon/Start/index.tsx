@@ -2,10 +2,10 @@ import { Effect, MeshBuilder, ShaderMaterial, Texture } from "@babylonjs/core";
 import vertexSource from "./vertex.glsl?raw";
 import fragmentSource from "./fragment.glsl?raw";
 import waterMap from "@/assets/images/R.jpg";
-import BasicScene, { SceneActor } from "@/components/BasicScene";
+import BabylonScene, { BabylonSceneActor } from "@/components/BabylonScene";
 
 const World = () => {
-  const onMount = (actor: SceneActor) => {
+  const onMount = (actor: BabylonSceneActor) => {
     const { scene } = actor;
     // 相机半径设置成8
     const box = MeshBuilder.CreateGround(
@@ -48,7 +48,7 @@ const World = () => {
       box?.material?.getEffect?.()?.setFloat("time", time);
     });
   };
-  return <BasicScene onMount={onMount}></BasicScene>;
+  return <BabylonScene onMount={onMount}></BabylonScene>;
 };
 
 export default World;

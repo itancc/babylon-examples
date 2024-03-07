@@ -1,12 +1,15 @@
 import ThemeCustomization from "@/themes";
 import NavigationScroll from "@/components/NavigationScroll";
 import Routes from "@/routes";
+import RouteBeforeEach from "./routes/RouterBeforeEach";
 
 function App() {
   return (
     <ThemeCustomization>
       <NavigationScroll>
-        <Routes />
+        <RouteBeforeEach>
+          <Routes />
+        </RouteBeforeEach>
       </NavigationScroll>
     </ThemeCustomization>
   );

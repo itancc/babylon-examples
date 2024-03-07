@@ -1,8 +1,8 @@
-import BasicScene, { SceneActor } from "@/components/BasicScene";
+import BabylonScene, { BabylonSceneActor } from "@/components/BabylonScene";
 import { MeshBuilder } from "@babylonjs/core";
 
 const Basic = () => {
-  const onMount = (actor: SceneActor) => {
+  const onMount = (actor: BabylonSceneActor) => {
     const { scene } = actor;
     MeshBuilder.CreateBox("box", { size: 2 }, scene);
     scene.createDefaultEnvironment({
@@ -11,7 +11,7 @@ const Basic = () => {
     });
     scene.createDefaultLight();
   };
-  return <BasicScene onMount={onMount}></BasicScene>;
+  return <BabylonScene onMount={onMount}></BabylonScene>;
 };
 
 export default Basic;

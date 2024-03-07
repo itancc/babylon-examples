@@ -6,7 +6,7 @@ import {
   StandardMaterial,
   Vector3,
 } from "@babylonjs/core";
-import BasicScene, { SceneActor } from "@/components/BasicScene";
+import BabylonScene, { BabylonSceneActor } from "@/components/BabylonScene";
 
 /** todo 分形算法 */
 const createBolt = () => {
@@ -28,7 +28,7 @@ const createBolt = () => {
 
 const Lightning = () => {
   let bolt: Mesh;
-  const onMount = ({ scene, camera }: SceneActor) => {
+  const onMount = ({ scene, camera }: BabylonSceneActor) => {
     camera.radius = 25;
     scene.createDefaultLight();
     MeshBuilder.CreateGround(
@@ -62,7 +62,7 @@ const Lightning = () => {
       });
     }
   };
-  return <BasicScene onMount={onMount} onRender={onRender}></BasicScene>;
+  return <BabylonScene onMount={onMount} onRender={onRender}></BabylonScene>;
 };
 
 export default Lightning;

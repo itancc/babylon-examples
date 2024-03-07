@@ -10,10 +10,10 @@ import {
 } from "@babylonjs/core";
 import "@babylonjs/loaders";
 import iconSvg from "@/assets/images/location.svg";
-import BasicScene, { SceneActor } from "@/components/BasicScene";
+import BabylonScene, { BabylonSceneActor } from "@/components/BabylonScene";
 
 const Billboard = () => {
-  const onMount = ({ scene, camera }: SceneActor) => {
+  const onMount = ({ scene, camera }: BabylonSceneActor) => {
     camera.radius = 15;
     scene.createDefaultLight();
     scene.onPointerObservable.add((pointerInfo) => {
@@ -23,7 +23,6 @@ const Billboard = () => {
           if (mesh) {
             camera.zoomOn([mesh]);
           }
-          console.log(pointerInfo);
           break;
         }
       }
@@ -50,7 +49,7 @@ const Billboard = () => {
     iconMesh.position = Vector3.Zero();
   };
 
-  return <BasicScene onMount={onMount}></BasicScene>;
+  return <BabylonScene onMount={onMount}></BabylonScene>;
 };
 
 export default Billboard;
