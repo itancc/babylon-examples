@@ -14,7 +14,6 @@ const WebGPUScene = ({ children }: PropsWithChildren) => {
     const context = container.getContext("webgpu")!;
     const presentationFormat = navigator.gpu.getPreferredCanvasFormat();
 
-    //  @ts-expect-error  typescript not support yet
     context.configure({
       device,
       format: presentationFormat,
@@ -61,21 +60,14 @@ const WebGPUScene = ({ children }: PropsWithChildren) => {
           clearValue: [0.3, 0.3, 0.3, 1],
           loadOp: "clear",
           storeOp: "store",
+          view: context.getCurrentTexture().createView(),
         },
       ],
     };
 
     function render() {
-      //@ts-expect-error typescript not support yet
-      renderPassDescriptor.colorAttachments[0].view = context
-        // @ts-expect-error typescript not support yet
-        .getCurrentTexture()
-        .createView();
-
       // make a command encoder to start encoding commands
       const encoder = device.createCommandEncoder({ label: "our encoder" });
-
-      //@ts-expect-error make a render pass encoder to encode render specific commands
       const pass = encoder.beginRenderPass(renderPassDescriptor);
       pass.setPipeline(pipeline);
       pass.draw(3); // call our vertex shader 3 times.

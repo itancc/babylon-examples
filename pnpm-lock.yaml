@@ -16,10 +16,10 @@ dependencies:
     version: 1.3.0
   '@babylonjs/inspector':
     specifier: ^6.38.1
-    version: 6.38.1(@babylonjs/core@6.38.1)(@babylonjs/gui-editor@6.38.1)(@babylonjs/gui@6.38.1)(@babylonjs/loaders@6.38.1)(@babylonjs/materials@6.38.1)(@babylonjs/serializers@6.38.1)(@types/react-dom@18.2.18)(@types/react@18.2.48)
+    version: 6.38.1(@babylonjs/core@6.38.1)(@babylonjs/gui-editor@6.46.0)(@babylonjs/gui@6.38.1)(@babylonjs/loaders@6.38.1)(@babylonjs/materials@6.46.0)(@babylonjs/serializers@6.46.0)(@types/react-dom@18.2.18)(@types/react@18.2.48)
   '@babylonjs/loaders':
     specifier: ^6.38.1
-    version: 6.38.1(@babylonjs/core@6.38.1)(babylonjs-gltf2interface@6.38.1)
+    version: 6.38.1(@babylonjs/core@6.38.1)(babylonjs-gltf2interface@6.46.0)
   '@emotion/react':
     specifier: ^11.11.3
     version: 11.11.3(@types/react@18.2.48)(react@18.2.0)
@@ -54,13 +54,16 @@ devDependencies:
     version: 18.2.18
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.18.1
-    version: 6.18.1(@typescript-eslint/parser@6.18.1)(eslint@8.56.0)(typescript@5.3.3)
+    version: 6.18.1(@typescript-eslint/parser@6.18.1)(eslint@8.56.0)(typescript@5.4.2)
   '@typescript-eslint/parser':
     specifier: ^6.18.1
-    version: 6.18.1(eslint@8.56.0)(typescript@5.3.3)
+    version: 6.18.1(eslint@8.56.0)(typescript@5.4.2)
   '@vitejs/plugin-react':
     specifier: ^4.2.1
     version: 4.2.1(vite@4.5.1)
+  '@webgpu/types':
+    specifier: ^0.1.40
+    version: 0.1.40
   eslint:
     specifier: ^8.56.0
     version: 8.56.0
@@ -71,11 +74,11 @@ devDependencies:
     specifier: ^0.4.5
     version: 0.4.5(eslint@8.56.0)
   typescript:
-    specifier: ^5.3.3
-    version: 5.3.3
+    specifier: ^5.4.2
+    version: 5.4.2
   unocss:
     specifier: ^0.58.5
-    version: 0.58.5(postcss@8.4.33)(vite@4.5.1)
+    version: 0.58.5(postcss@8.4.35)(vite@4.5.1)
   vite:
     specifier: ^4.5.1
     version: 4.5.1
@@ -536,8 +539,8 @@ packages:
     resolution: {integrity: sha512-cJXRIUfLWeJ9ncrA/t/u4Cs9Eq3cJ/t7KUiLWqQTcqA+slC8nsO1mMNmsGqiDXjEZev6UpPWBlGbc5mdz+17DA==}
     dev: false
 
-  /@babylonjs/gui-editor@6.38.1(@babylonjs/core@6.38.1)(@babylonjs/gui@6.38.1)(@types/react-dom@18.2.18)(@types/react@18.2.48):
-    resolution: {integrity: sha512-uRy2/22chhOQw181CAUsjhscKOeS40VI4CRjsRyRHOE/r3KKXHctLInyC43anR/yGvnM90A/IEGikwp1LUjGpg==}
+  /@babylonjs/gui-editor@6.46.0(@babylonjs/core@6.38.1)(@babylonjs/gui@6.38.1)(@types/react-dom@18.2.18)(@types/react@18.2.48):
+    resolution: {integrity: sha512-vKdwmm9UQYoz0KRHFm31cotGCWAzkR9k1aB6C5xhgJ6S4kwzq8YUIpcc2D6cUMw7faRjx9AOlD4s7kgUHkxsSg==}
     peerDependencies:
       '@babylonjs/core': ^6.0.0
       '@babylonjs/gui': ^6.0.0
@@ -564,7 +567,7 @@ packages:
       '@types/emscripten': 1.39.10
     dev: false
 
-  /@babylonjs/inspector@6.38.1(@babylonjs/core@6.38.1)(@babylonjs/gui-editor@6.38.1)(@babylonjs/gui@6.38.1)(@babylonjs/loaders@6.38.1)(@babylonjs/materials@6.38.1)(@babylonjs/serializers@6.38.1)(@types/react-dom@18.2.18)(@types/react@18.2.48):
+  /@babylonjs/inspector@6.38.1(@babylonjs/core@6.38.1)(@babylonjs/gui-editor@6.46.0)(@babylonjs/gui@6.38.1)(@babylonjs/loaders@6.38.1)(@babylonjs/materials@6.46.0)(@babylonjs/serializers@6.46.0)(@types/react-dom@18.2.18)(@types/react@18.2.48):
     resolution: {integrity: sha512-UPlFbbieM/86RlylTn5hzaFsr/VCyveX5PXldVFeRTyPy1k0aVaZieEFySTbePwacUpZv+PUenEtAclDiRF1Xw==}
     peerDependencies:
       '@babylonjs/core': ^6.0.0
@@ -578,10 +581,10 @@ packages:
     dependencies:
       '@babylonjs/core': 6.38.1
       '@babylonjs/gui': 6.38.1(@babylonjs/core@6.38.1)
-      '@babylonjs/gui-editor': 6.38.1(@babylonjs/core@6.38.1)(@babylonjs/gui@6.38.1)(@types/react-dom@18.2.18)(@types/react@18.2.48)
-      '@babylonjs/loaders': 6.38.1(@babylonjs/core@6.38.1)(babylonjs-gltf2interface@6.38.1)
-      '@babylonjs/materials': 6.38.1(@babylonjs/core@6.38.1)
-      '@babylonjs/serializers': 6.38.1(@babylonjs/core@6.38.1)(babylonjs-gltf2interface@6.38.1)
+      '@babylonjs/gui-editor': 6.46.0(@babylonjs/core@6.38.1)(@babylonjs/gui@6.38.1)(@types/react-dom@18.2.18)(@types/react@18.2.48)
+      '@babylonjs/loaders': 6.38.1(@babylonjs/core@6.38.1)(babylonjs-gltf2interface@6.46.0)
+      '@babylonjs/materials': 6.46.0(@babylonjs/core@6.38.1)
+      '@babylonjs/serializers': 6.46.0(@babylonjs/core@6.38.1)(babylonjs-gltf2interface@6.46.0)
       '@fortawesome/fontawesome-svg-core': 6.5.1
       '@fortawesome/free-regular-svg-icons': 6.5.1
       '@fortawesome/free-solid-svg-icons': 6.5.1
@@ -589,32 +592,32 @@ packages:
       '@types/react-dom': 18.2.18
     dev: false
 
-  /@babylonjs/loaders@6.38.1(@babylonjs/core@6.38.1)(babylonjs-gltf2interface@6.38.1):
+  /@babylonjs/loaders@6.38.1(@babylonjs/core@6.38.1)(babylonjs-gltf2interface@6.46.0):
     resolution: {integrity: sha512-kFL/oiC1VCvQsl/4RCXb+zAJ3pF1Erxe+0qFFCaDjSdI0QE1dWmvfY5yDhCH0JWGO5qy+Wy/52Bd5tzSBN8jUg==}
     peerDependencies:
       '@babylonjs/core': ^6.0.0
       babylonjs-gltf2interface: ^6.0.0
     dependencies:
       '@babylonjs/core': 6.38.1
-      babylonjs-gltf2interface: 6.38.1
+      babylonjs-gltf2interface: 6.46.0
     dev: false
 
-  /@babylonjs/materials@6.38.1(@babylonjs/core@6.38.1):
-    resolution: {integrity: sha512-/FK7Nw2ojJPqOe4szh9S7oU3iESvJ903BcoZgRXdURFwJe0uGliW3i7HyMWHlk56E2cqmiDgakphOGldBxvVbw==}
+  /@babylonjs/materials@6.46.0(@babylonjs/core@6.38.1):
+    resolution: {integrity: sha512-889ng1ZaCxfDYyi/P88BHhKtm1iB3kvxvcCL3jJ7IuO0B72SfGXYXagrpMDSQl+tOsnngm42ZoRw7RIXCwxlaQ==}
     peerDependencies:
       '@babylonjs/core': ^6.0.0
     dependencies:
       '@babylonjs/core': 6.38.1
     dev: false
 
-  /@babylonjs/serializers@6.38.1(@babylonjs/core@6.38.1)(babylonjs-gltf2interface@6.38.1):
-    resolution: {integrity: sha512-SlyfZT7JOQSBwWN8PLQXqFwHImuJqDeiD4CLXgcVG7e17JF9XzWDrx98N0D9m1u8C/a9ZGe2/P77uAeEKt9WqQ==}
+  /@babylonjs/serializers@6.46.0(@babylonjs/core@6.38.1)(babylonjs-gltf2interface@6.46.0):
+    resolution: {integrity: sha512-fZEhtPJqjAyFXcPhKpZZQf691jQkEb3BynaBjsBhydyN9ypd/Pv2ZbH6iG6CntReGsHtF4S3iD48fPvouM/rZA==}
     peerDependencies:
       '@babylonjs/core': ^6.0.0
       babylonjs-gltf2interface: ^6.0.0
     dependencies:
       '@babylonjs/core': 6.38.1
-      babylonjs-gltf2interface: 6.38.1
+      babylonjs-gltf2interface: 6.46.0
     dev: false
 
   /@emotion/babel-plugin@11.11.0:
@@ -1397,7 +1400,7 @@ packages:
     resolution: {integrity: sha512-dn1l8LaMea/IjDoHNd9J52uBbInB796CDffS6VdIxvqYCPSG0V0DzHp76GpaWnlhg88uYyPbXCDIowa86ybd5A==}
     dev: true
 
-  /@typescript-eslint/eslint-plugin@6.18.1(@typescript-eslint/parser@6.18.1)(eslint@8.56.0)(typescript@5.3.3):
+  /@typescript-eslint/eslint-plugin@6.18.1(@typescript-eslint/parser@6.18.1)(eslint@8.56.0)(typescript@5.4.2):
     resolution: {integrity: sha512-nISDRYnnIpk7VCFrGcu1rnZfM1Dh9LRHnfgdkjcbi/l7g16VYRri3TjXi9Ir4lOZSw5N/gnV/3H7jIPQ8Q4daA==}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
@@ -1409,10 +1412,10 @@ packages:
         optional: true
     dependencies:
       '@eslint-community/regexpp': 4.10.0
-      '@typescript-eslint/parser': 6.18.1(eslint@8.56.0)(typescript@5.3.3)
+      '@typescript-eslint/parser': 6.18.1(eslint@8.56.0)(typescript@5.4.2)
       '@typescript-eslint/scope-manager': 6.18.1
-      '@typescript-eslint/type-utils': 6.18.1(eslint@8.56.0)(typescript@5.3.3)
-      '@typescript-eslint/utils': 6.18.1(eslint@8.56.0)(typescript@5.3.3)
+      '@typescript-eslint/type-utils': 6.18.1(eslint@8.56.0)(typescript@5.4.2)
+      '@typescript-eslint/utils': 6.18.1(eslint@8.56.0)(typescript@5.4.2)
       '@typescript-eslint/visitor-keys': 6.18.1
       debug: 4.3.4
       eslint: 8.56.0
@@ -1420,13 +1423,13 @@ packages:
       ignore: 5.3.0
       natural-compare: 1.4.0
       semver: 7.5.4
-      ts-api-utils: 1.0.3(typescript@5.3.3)
-      typescript: 5.3.3
+      ts-api-utils: 1.0.3(typescript@5.4.2)
+      typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@typescript-eslint/parser@6.18.1(eslint@8.56.0)(typescript@5.3.3):
+  /@typescript-eslint/parser@6.18.1(eslint@8.56.0)(typescript@5.4.2):
     resolution: {integrity: sha512-zct/MdJnVaRRNy9e84XnVtRv9Vf91/qqe+hZJtKanjojud4wAVy/7lXxJmMyX6X6J+xc6c//YEWvpeif8cAhWA==}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
@@ -1438,11 +1441,11 @@ packages:
     dependencies:
       '@typescript-eslint/scope-manager': 6.18.1
       '@typescript-eslint/types': 6.18.1
-      '@typescript-eslint/typescript-estree': 6.18.1(typescript@5.3.3)
+      '@typescript-eslint/typescript-estree': 6.18.1(typescript@5.4.2)
       '@typescript-eslint/visitor-keys': 6.18.1
       debug: 4.3.4
       eslint: 8.56.0
-      typescript: 5.3.3
+      typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1455,7 +1458,7 @@ packages:
       '@typescript-eslint/visitor-keys': 6.18.1
     dev: true
 
-  /@typescript-eslint/type-utils@6.18.1(eslint@8.56.0)(typescript@5.3.3):
+  /@typescript-eslint/type-utils@6.18.1(eslint@8.56.0)(typescript@5.4.2):
     resolution: {integrity: sha512-wyOSKhuzHeU/5pcRDP2G2Ndci+4g653V43gXTpt4nbyoIOAASkGDA9JIAgbQCdCkcr1MvpSYWzxTz0olCn8+/Q==}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
@@ -1465,12 +1468,12 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/typescript-estree': 6.18.1(typescript@5.3.3)
-      '@typescript-eslint/utils': 6.18.1(eslint@8.56.0)(typescript@5.3.3)
+      '@typescript-eslint/typescript-estree': 6.18.1(typescript@5.4.2)
+      '@typescript-eslint/utils': 6.18.1(eslint@8.56.0)(typescript@5.4.2)
       debug: 4.3.4
       eslint: 8.56.0
-      ts-api-utils: 1.0.3(typescript@5.3.3)
-      typescript: 5.3.3
+      ts-api-utils: 1.0.3(typescript@5.4.2)
+      typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1480,7 +1483,7 @@ packages:
     engines: {node: ^16.0.0 || >=18.0.0}
     dev: true
 
-  /@typescript-eslint/typescript-estree@6.18.1(typescript@5.3.3):
+  /@typescript-eslint/typescript-estree@6.18.1(typescript@5.4.2):
     resolution: {integrity: sha512-fv9B94UAhywPRhUeeV/v+3SBDvcPiLxRZJw/xZeeGgRLQZ6rLMG+8krrJUyIf6s1ecWTzlsbp0rlw7n9sjufHA==}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
@@ -1496,13 +1499,13 @@ packages:
       is-glob: 4.0.3
       minimatch: 9.0.3
       semver: 7.5.4
-      ts-api-utils: 1.0.3(typescript@5.3.3)
-      typescript: 5.3.3
+      ts-api-utils: 1.0.3(typescript@5.4.2)
+      typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@typescript-eslint/utils@6.18.1(eslint@8.56.0)(typescript@5.3.3):
+  /@typescript-eslint/utils@6.18.1(eslint@8.56.0)(typescript@5.4.2):
     resolution: {integrity: sha512-zZmTuVZvD1wpoceHvoQpOiewmWu3uP9FuTWo8vqpy2ffsmfCE8mklRPi+vmnIYAIk9t/4kOThri2QCDgor+OpQ==}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
@@ -1513,7 +1516,7 @@ packages:
       '@types/semver': 7.5.6
       '@typescript-eslint/scope-manager': 6.18.1
       '@typescript-eslint/types': 6.18.1
-      '@typescript-eslint/typescript-estree': 6.18.1(typescript@5.3.3)
+      '@typescript-eslint/typescript-estree': 6.18.1(typescript@5.4.2)
       eslint: 8.56.0
       semver: 7.5.4
     transitivePeerDependencies:
@@ -1598,7 +1601,7 @@ packages:
       sirv: 2.0.4
     dev: true
 
-  /@unocss/postcss@0.58.5(postcss@8.4.33):
+  /@unocss/postcss@0.58.5(postcss@8.4.35):
     resolution: {integrity: sha512-m4L2YRdYfT6CV306Kl2VwEwbqa/92EpW4GE2Kqak1RuJyFJXBnWEEMJV4Uy6B1jWKLlCEWkuVUW33JUg7X6BxQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -1610,7 +1613,7 @@ packages:
       css-tree: 2.3.1
       fast-glob: 3.3.2
       magic-string: 0.30.8
-      postcss: 8.4.33
+      postcss: 8.4.35
     dev: true
 
   /@unocss/preset-attributify@0.58.5:
@@ -1763,6 +1766,10 @@ packages:
       - supports-color
     dev: true
 
+  /@webgpu/types@0.1.40:
+    resolution: {integrity: sha512-/BBkHLS6/eQjyWhY2H7Dx5DHcVrS2ICj9owvSRdgtQT6KcafLZA86tPze0xAOsd4FbsYKCUBUQyNi87q7gV7kw==}
+    dev: true
+
   /acorn-jsx@5.3.2(acorn@8.11.3):
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
@@ -1830,8 +1837,8 @@ packages:
       resolve: 1.22.8
     dev: false
 
-  /babylonjs-gltf2interface@6.38.1:
-    resolution: {integrity: sha512-kKvHu1SUSnerxhrERSimw8ts+uApxcEJoZu5pmKjbgGZGmQ2KRTnxa1h3mScdKlSoJ999emPQIabse8XzlwnOw==}
+  /babylonjs-gltf2interface@6.46.0:
+    resolution: {integrity: sha512-oHQn/BM//GS7f4EZN/f/XUq4pi07jEs0qyftLHQxnR6e1XlJwvKUd6L0aWbYjptZtNnSPOkYFB9VvMHVGymYJw==}
     dev: false
 
   /balanced-match@1.0.2:
@@ -2809,6 +2816,15 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
+  /postcss@8.4.35:
+    resolution: {integrity: sha512-u5U8qYpBCpN13BsiEB0CbR1Hhh4Gc0zLFuedrHJKMctHCHAGrMdG0PRM/KErzAL3CU6/eckEtmHNB3x6e3c0vA==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.7
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+    dev: true
+
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
@@ -3066,13 +3082,13 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /ts-api-utils@1.0.3(typescript@5.3.3):
+  /ts-api-utils@1.0.3(typescript@5.4.2):
     resolution: {integrity: sha512-wNMeqtMz5NtwpT/UZGY5alT+VoKdSsOOP/kqHFcUW1P/VRhH2wJ48+DN2WwUliNbQ976ETwDL0Ifd2VVvgonvg==}
     engines: {node: '>=16.13.0'}
     peerDependencies:
       typescript: '>=4.2.0'
     dependencies:
-      typescript: 5.3.3
+      typescript: 5.4.2
     dev: true
 
   /type-check@0.4.0:
@@ -3087,8 +3103,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /typescript@5.3.3:
-    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+  /typescript@5.4.2:
+    resolution: {integrity: sha512-+2/g0Fds1ERlP6JsakQQDXjZdZMM+rqpamFZJEKh4kwTIn3iDkgKtby0CeNd5ATNZ4Ry1ax15TMx0W2V+miizQ==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
@@ -3106,7 +3122,7 @@ packages:
       mlly: 1.6.1
     dev: true
 
-  /unocss@0.58.5(postcss@8.4.33)(vite@4.5.1):
+  /unocss@0.58.5(postcss@8.4.35)(vite@4.5.1):
     resolution: {integrity: sha512-0g4P6jLgRRNnhscxw7nQ9RHGrKJ1UPPiHPet+YT3TXUcmy4mTiYgo9+kGQf5bjyrzsELJ10cT6Qz2y6g9Tls4g==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -3122,7 +3138,7 @@ packages:
       '@unocss/cli': 0.58.5
       '@unocss/core': 0.58.5
       '@unocss/extractor-arbitrary-variants': 0.58.5
-      '@unocss/postcss': 0.58.5(postcss@8.4.33)
+      '@unocss/postcss': 0.58.5(postcss@8.4.35)
       '@unocss/preset-attributify': 0.58.5
       '@unocss/preset-icons': 0.58.5
       '@unocss/preset-mini': 0.58.5

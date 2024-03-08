@@ -56,10 +56,15 @@ const menuOptions = [
 export type MenuOption = (typeof menuOptions)[number];
 
 export default function LogoMenu() {
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const [selectMenuOption, setSelectMenuOption] = useState<MenuOption>(
-    menuOptions[0]
-  );
+  const defaultOption =
+    menuOptions.find((option) => pathname.includes(option.route)) ??
+    menuOptions[0];
+
+  const [selectMenuOption, setSelectMenuOption] =
+    useState<MenuOption>(defaultOption);
   const open = Boolean(anchorEl);
   const handleClick = (event: MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -72,8 +77,7 @@ export default function LogoMenu() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const navigate = useNavigate();
-  const { pathname } = useLocation();
+
   const goHome = () => {
     if (pathname === selectMenuOption.route) return;
     navigate(selectMenuOption.route);
