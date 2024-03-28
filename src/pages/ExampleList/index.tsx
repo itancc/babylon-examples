@@ -16,7 +16,6 @@ const ExampleList = () => {
   const currentComponents = useMemo(() => {
     return exampleComponents.slice((page - 1) * pageSize, page * pageSize);
   }, [exampleComponents, page, pageSize]);
-
   const onPageChange = (_event: ChangeEvent<unknown>, value: number) => {
     setPage(value);
   };
