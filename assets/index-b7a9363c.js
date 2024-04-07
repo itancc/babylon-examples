@@ -1,1 +1,0 @@
-import{j as a}from"./index-f66d5ea3.js";import{B as m,b as r}from"./index-fe6f640a.js";import"./splatFileLoader-67433217.js";import"./useOneFrame-55d8e1b3.js";const p=()=>{const o=({scene:e,camera:t})=>{t.radius=4,e.createDefaultLight(),r.AppendAsync("/babylon-examples//models/DamagedHelmet/","DamagedHelmet.gltf",e)};return a.jsx(m,{onMount:o})};export{p as default};
