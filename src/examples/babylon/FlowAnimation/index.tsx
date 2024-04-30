@@ -6,7 +6,6 @@ import {
   Mesh,
   MeshBuilder,
   ShaderMaterial,
-  Texture,
   Vector3,
 } from "@babylonjs/core";
 import FlowVertext from "./flow.vertex.glsl?raw";

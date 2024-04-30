@@ -1,6 +1,5 @@
 import { PropsWithChildren, useEffect, useRef } from "react";
 import FullBox from "../FullBox";
-import { PrimitiveType } from "./PrimitiveType";
 export interface WebglSceneActor {
   container: HTMLCanvasElement;
   gl: WebGL2RenderingContext;
