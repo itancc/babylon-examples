@@ -1,6 +1,6 @@
 import { PropsWithChildren, useEffect, useRef } from "react";
 import FullBox from "../FullBox";
-
+import { PrimitiveType } from "./PrimitiveType";
 export interface WebglSceneActor {
   container: HTMLCanvasElement;
   gl: WebGL2RenderingContext;
@@ -83,11 +83,8 @@ const WebglScene = (props: PropsWithChildren<WebglSceneProps>) => {
   useEffect(() => {
     const container = sceneRef.current!;
     const gl = container.getContext("webgl2");
-    if (!gl) {
-      return;
-    }
-    // 抗锯齿
-    gl.enable(gl.SAMPLES);
+    if (!gl) return;
+
     onMount?.({
       container,
       gl,
