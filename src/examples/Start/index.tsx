@@ -1,6 +1,6 @@
 import { Effect, MeshBuilder, ShaderMaterial, Texture } from "@babylonjs/core";
-import vertexSource from "./vertex.glsl?raw";
-import fragmentSource from "./fragment.glsl?raw";
+import vertexSource from "./start.vert?raw";
+import fragmentSource from "./start.frag?raw";
 import waterMap from "@/assets/images/R.jpg";
 import BabylonScene, { BabylonSceneActor } from "@/components/BabylonScene";
 

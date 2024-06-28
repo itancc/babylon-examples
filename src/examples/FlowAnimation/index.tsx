@@ -8,8 +8,8 @@ import {
   ShaderMaterial,
   Vector3,
 } from "@babylonjs/core";
-import FlowVertext from "./flow.vertex.glsl?raw";
-import FlowFragment from "./flow.fragment.glsl?raw";
+import FlowVertext from "./flow.vert?raw";
+import FlowFragment from "./flow.frag?raw";
 
 const FlowAnimation = () => {
   const onMount = ({ scene, camera }: BabylonSceneActor) => {

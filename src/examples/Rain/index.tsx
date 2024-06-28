@@ -5,7 +5,7 @@ import {
   Vector3,
   ParticleHelper,
 } from "@babylonjs/core";
-import RainFragmentShader from "./rain.fragment.glsl?raw";
+import RainFragmentShader from "./rain.frag?raw";
 
 import BabylonScene, { BabylonSceneActor } from "@/components/BabylonScene";
 

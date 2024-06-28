@@ -1,5 +1,4 @@
 import { Components, Theme } from "@mui/material";
-import HarmonyOSSans from "@/assets/fonts/HarmonyOS_Sans_Regular.ttf";
 
 export default function CssBaseline(): Components<Omit<Theme, "components">> {
   return {
