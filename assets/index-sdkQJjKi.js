@@ -1,1 +1,0 @@
-import{j as o}from"./index-qK7EeeSf.js";import{B as a}from"./index-6aWqoLwu.js";import{M as n}from"./meshBuilder-DlXjP-VJ.js";import"./useOneFrame-BSpAerCl.js";const m=()=>{const t=r=>{const{scene:e}=r;n.CreateBox("box",{size:2},e),e.createDefaultEnvironment({createSkybox:!0,createGround:!0}),e.createDefaultLight()};return o.jsx(a,{onMount:t})};export{m as default};

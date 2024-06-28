@@ -1,0 +1,1 @@
+import{t,j as e}from"./index-B-EvXfm5.js";import{u as a,O as m,F as r}from"./useOneFrame-BnmapwYm.js";const u=()=>{const{name:n}=t(),s=a().find(o=>o.name===n);return e.jsx(m.Provider,{value:!1,children:e.jsx(r,{sx:{p:3},children:s?e.jsx(s.component,{}):null})})};export{u as default};
