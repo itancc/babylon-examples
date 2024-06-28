@@ -15,30 +15,6 @@ const MainRoutes: RouteObject[] = [
       { path: ":name", element: <ExampleDetail /> },
     ],
   },
-  {
-    path: "/babylon",
-    element: <MainLayout />,
-    children: [
-      { path: "", element: <ExampleList /> },
-      { path: ":name", element: <ExampleDetail /> },
-    ],
-  },
-  {
-    path: "/webgpu",
-    element: <MainLayout />,
-    children: [
-      { path: "", element: <ExampleList /> },
-      { path: ":name", element: <ExampleDetail /> },
-    ],
-  },
-  {
-    path: "/webgl",
-    element: <MainLayout />,
-    children: [
-      { path: "", element: <ExampleList /> },
-      { path: ":name", element: <ExampleDetail /> },
-    ],
-  },
 ];
 
 export default MainRoutes;

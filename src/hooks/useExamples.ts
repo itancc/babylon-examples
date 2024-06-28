@@ -5,7 +5,6 @@ import {
   useEffect,
   useState,
 } from "react";
-import { useLocation } from "react-router-dom";
 
 export interface ExampleComponent {
   name: string;
@@ -32,34 +31,14 @@ function readyComponents(modules: Record<string, () => Promise<unknown>>) {
 }
 
 export const useExamples = () => {
-  const { pathname } = useLocation();
-  const routeName = pathname.split("/")[1] || "babylon";
   const [babylonComponents, setBabylonComponents] = useState<
     ExampleComponent[]
   >([]);
-  const [webgpuComponents, setWebgpuComponents] = useState<ExampleComponent[]>(
-    []
-  );
-  const [webglComponents, setWebglComponents] = useState<ExampleComponent[]>(
-    []
-  );
 
   useEffect(() => {
-    const babylonModules = import.meta.glob("../examples/babylon/**/index.tsx");
+    const babylonModules = import.meta.glob("../examples/**/index.tsx");
     setBabylonComponents(readyComponents(babylonModules));
-
-    const webgpuModules = import.meta.glob("../examples/webgpu/**/index.tsx");
-    setWebgpuComponents(readyComponents(webgpuModules));
-
-    const webglComponents = import.meta.glob("../examples/webgl/**/index.tsx");
-    setWebglComponents(readyComponents(webglComponents));
   }, []);
 
-  const routeComponents = {
-    babylon: babylonComponents,
-    webgpu: webgpuComponents,
-    webgl: webglComponents,
-  } as const;
-
-  return routeComponents[routeName as keyof typeof routeComponents];
+  return babylonComponents;
 };

@@ -39,13 +39,6 @@ export default function CssBaseline(): Components<Omit<Theme, "components">> {
         //     backgroundColor: "rgba(120, 120, 120, 0.7)",
         //   },
         // },
-        "@font-face": {
-          fontFamily: "HarmonyOSSans",
-          src: `url(${HarmonyOSSans})`,
-          fontWeight: "normal",
-          fontStyle: "normal",
-          fontDisplay: "swap",
-        },
       },
     },
   };
