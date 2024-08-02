@@ -10,10 +10,10 @@ import {
 } from "@babylonjs/core";
 import "@babylonjs/loaders";
 import iconSvg from "@/assets/images/location.svg";
-import BabylonScene, { BabylonSceneActor } from "@/components/BabylonScene";
+import { BScene, BSceneActor } from "@/components/BScene";
 
 const Billboard = () => {
-  const onMount = ({ scene, camera }: BabylonSceneActor) => {
+  const onMount = ({ scene, camera }: BSceneActor) => {
     camera.radius = 15;
     scene.createDefaultLight();
     scene.onPointerObservable.add((pointerInfo) => {
@@ -49,7 +49,7 @@ const Billboard = () => {
     iconMesh.position = Vector3.Zero();
   };
 
-  return <BabylonScene onMount={onMount}></BabylonScene>;
+  return <BScene onMount={onMount}></BScene>;
 };
 
 export default Billboard;

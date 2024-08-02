@@ -1,24 +1,30 @@
-import { ArcRotateCamera, Engine, Scene, Vector3 } from "@babylonjs/core";
-import FullBox from "../FullBox";
 import { PropsWithChildren, useEffect, useRef } from "react";
-import { Nullable } from "@/utils/types";
+import FullBox from "./FullBox";
+import {
+  ArcRotateCamera,
+  Engine,
+  Nullable,
+  Scene,
+  Vector3,
+} from "@babylonjs/core";
 import { useOneFrame } from "@/hooks/useOneFrame";
 
-export interface BabylonSceneActor {
+export interface BSceneActor {
   container: HTMLCanvasElement;
   scene: Scene;
   engine: Engine;
   camera: ArcRotateCamera;
 }
-export interface BabylonSceneProps {
+export interface BSceneProps {
   /** 挂载完成 */
-  onMount?: (actor: BabylonSceneActor) => void;
+  onMount?: (actor: BSceneActor) => void;
   /** 自定义render方法 */
-  onRender?: (actor: BabylonSceneActor) => void;
+  onRender?: (actor: BSceneActor) => void;
   /** 挂载结束 */
-  onUnmount?: (actor: BabylonSceneActor) => void;
+  onUnmount?: (actor: BSceneActor) => void;
 }
-const BabylonScene = (props: PropsWithChildren<BabylonSceneProps>) => {
+
+export const BScene = (props: PropsWithChildren<BSceneProps>) => {
   const { children, onMount, onRender, onUnmount } = props;
   const sceneRef = useRef<HTMLCanvasElement>(null);
   const oneFrame = useOneFrame();
@@ -83,5 +89,3 @@ const BabylonScene = (props: PropsWithChildren<BabylonSceneProps>) => {
     </FullBox>
   );
 };
-
-export default BabylonScene;

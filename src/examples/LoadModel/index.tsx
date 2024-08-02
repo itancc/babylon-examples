@@ -1,9 +1,9 @@
 import { SceneLoader } from "@babylonjs/core";
 import "@babylonjs/loaders";
-import BabylonScene, { BabylonSceneActor } from "@/components/BabylonScene";
+import { BScene, BSceneActor } from "@/components/BScene";
 
 const LoadModel = () => {
-  const onMount = ({ scene, camera }: BabylonSceneActor) => {
+  const onMount = ({ scene, camera }: BSceneActor) => {
     camera.radius = 4;
     scene.createDefaultLight();
     SceneLoader.AppendAsync(
@@ -12,7 +12,7 @@ const LoadModel = () => {
       scene
     );
   };
-  return <BabylonScene onMount={onMount}></BabylonScene>;
+  return <BScene onMount={onMount}></BScene>;
 };
 
 export default LoadModel;

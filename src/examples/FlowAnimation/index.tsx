@@ -1,4 +1,5 @@
-import BabylonScene, { BabylonSceneActor } from "@/components/BabylonScene";
+import { BScene, BSceneActor } from "@/components/BScene";
+
 import {
   Color3,
   Color4,
@@ -12,7 +13,7 @@ import FlowVertext from "./flow.vert?raw";
 import FlowFragment from "./flow.frag?raw";
 
 const FlowAnimation = () => {
-  const onMount = ({ scene, camera }: BabylonSceneActor) => {
+  const onMount = ({ scene, camera }: BSceneActor) => {
     camera.radius = 30;
     scene.createDefaultLight();
     const path = [
@@ -52,7 +53,7 @@ const FlowAnimation = () => {
     });
   };
 
-  return <BabylonScene onMount={onMount}></BabylonScene>;
+  return <BScene onMount={onMount}></BScene>;
 };
 
 export default FlowAnimation;

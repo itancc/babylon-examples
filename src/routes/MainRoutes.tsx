@@ -1,4 +1,4 @@
-import Loadable from "@/components/Loadable";
+import { Loadable } from "@/components/Loadable";
 import MainLayout from "@/layouts/MainLayout";
 import { lazy } from "react";
 import { RouteObject } from "react-router-dom";

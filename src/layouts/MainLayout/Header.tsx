@@ -31,11 +31,6 @@ const Header = () => {
           }}
         >
           <LogoMenu></LogoMenu>
-          <TextField
-            size="small"
-            placeholder="搜索"
-            sx={{ marginLeft: 4 }}
-          ></TextField>
         </Box>
         {/* 暗黑模式 */}
         <IconButton sx={{ ml: 1 }} onClick={onThemeChange} color="inherit">
